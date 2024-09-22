@@ -6,6 +6,10 @@ body {
     padding: 20px;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 h1,
 h2 {
     color: #39e991;
