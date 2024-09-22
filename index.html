@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Семантична та доступна сторінка</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Семантичні вимоги до веб-розробки</h1>
+      <nav>
+        <ul>
+          <li><a href="#article">Стаття</a></li>
+          <li><a href="#details">Деталі</a></li>
+          <li><a href="#form">Форма</a></li>
+          <li><a href="#buttons">Кнопки</a></li>
+          <li><a href="#list">Список</a></li>
+          <li><a href="#table">Таблиця</a></li>
+          <li><a href="#images">Зображення</a></li>
+          <li><a href="#footer">Футер</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Стаття -->
+      <article id="article">
+        <header>
+          <h2>Важливість семантики у веб-розробці</h2>
+          <p>
+            Дата публікації: <time datetime="2024-09-22">22 вересня 2024</time>
+          </p>
+        </header>
+        <p>
+          Семантична розмітка підвищує доступність сторінки для всіх типів
+          користувачів, включно з тими, що використовують допоміжні технології.
+          Вона також допомагає пошуковим системам краще індексувати ваш сайт.
+        </p>
+        <p>
+          Використання таких елементів, як <code>&lt;article&gt;</code>,
+          <code>&lt;section&gt;</code> і <code>&lt;header&gt;</code>, дозволяє
+          створювати структурований контент, що легко читається і зручний у
+          навігації.
+        </p>
+        <footer>
+          <p>Автор: <span>Олена Васильчук</span></p>
+        </footer>
+      </article>
+
+      <!-- Детальна інформація -->
+      <section id="details">
+        <h2>Приклад використання детальної інформації</h2>
+        <p>
+          <details>
+            <summary>Приклад детальної інформації</summary>
+            <p>Текст детальної інформації</p>
+          </details>
+        </p>
+      </section>
+
+      <!-- Форма -->
+      <section id="form">
+        <h2>Контактна форма</h2>
+        <form action="/submit" method="POST">
+          <label for="name">Ваше ім'я:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Ваш email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Повідомлення:</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+
+          <button type="submit">Відправити</button>
+        </form>
+      </section>
+
+      <!-- Кнопки -->
+      <section id="buttons">
+        <h2>Приклад використання кнопок</h2>
+        <button type="button">Звичайна кнопка</button>
+        <button type="submit">Кнопка для відправки форми</button>
+        <button type="reset">Кнопка для скидання форми</button>
+        <p>
+          Використовуйте <code>&lt;button&gt;</code> для створення інтерактивних
+          елементів на сторінці. Кнопки можуть мати різні типи, такі як
+          <code>button</code>, <code>submit</code> або <code>reset</code>, що
+          забезпечує правильну поведінку у формі.
+        </p>
+      </section>
+
+      <!-- Список -->
+      <section id="list">
+        <h2>Приклад використання списків</h2>
+        <h3>Переваги семантичної розмітки</h3>
+        <ul>
+          <li>Покращує доступність сайту.</li>
+          <li>Підвищує SEO-оптимізацію.</li>
+          <li>Полегшує розуміння коду іншими розробниками.</li>
+        </ul>
+      </section>
+
+      <!-- Таблиця -->
+      <section id="table">
+        <h2>Приклад використання таблиць</h2>
+        <table>
+          <caption style="color: #9eb0ff">
+            Оцінки студентів за семестр
+          </caption>
+          <thead>
+            <tr>
+              <th>Ім'я студента</th>
+              <th>Курс</th>
+              <th>Оцінка</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Марія Коваль</td>
+              <td>Математика</td>
+              <td>95</td>
+            </tr>
+            <tr>
+              <td>Олександр Бондаренко</td>
+              <td>Фізика</td>
+              <td>88</td>
+            </tr>
+            <tr>
+              <td>Анна Петрова</td>
+              <td>Інформатика</td>
+              <td>93</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Зображення -->
+      <section id="images">
+        <h2>Приклад використання зображень</h2>
+        <figure>
+          <img
+            src="https://ucarecdn.com/188949ff-9fe5-4e13-a682-f9a2cb4614fa/-/crop/1531x667/69,0/-/preview/-/resize/700/"
+            alt="Приклад зображення семантичного використання"
+          />
+          <figcaption>Підпис до зображення, що описує його зміст.</figcaption>
+        </figure>
+        <p>
+          Використовуйте атрибут <code>alt</code> у тегі
+          <code>&lt;img&gt;</code> для опису зображення для користувачів з
+          обмеженими можливостями або для тих, у кого зображення не
+          завантажується. Підписи до зображень можна додавати за допомогою
+          елементу <code>&lt;figcaption&gt;</code>.
+        </p>
+      </section>
+
+      <!-- Використання p і span -->
+      <section id="paragraph-span">
+        <h2>Приклад використання елементів p і span</h2>
+        <p>
+          Семантичні елементи, як <code>&lt;p&gt;</code> і
+          <code>&lt;span&gt;</code>, відіграють важливу роль у правильній
+          структурі тексту. Наприклад, текст
+          <span style="font-weight: bold">всередині span</span>
+          може бути виділений стилями, не порушуючи структури документа.
+        </p>
+      </section>
+    </main>
+
+    <!-- Футер -->
+    <footer id="footer">
+      <p>&copy; 2024 Семантична сторінка</p>
+    </footer>
+  </body>
+</html>
