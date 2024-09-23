@@ -173,7 +173,12 @@
 
     <!-- Футер -->
     <footer id="footer">
-      <p>&copy; 2024 Семантична сторінка</p>
+      <p>&copy; <span id="year"></span> Семантична сторінка</p>
     </footer>
+
+    <script>
+      const currentYear = new Date().getFullYear();
+      document.getElementById('year').textContent = currentYear;
+    </script>
   </body>
 </html>
