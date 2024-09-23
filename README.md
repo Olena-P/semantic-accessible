@@ -45,4 +45,3 @@ open index.html  # for Mac
 start index.html # for Windows
 ```
 Feel free to modify the HTML, CSS, or JavaScript files to customize the content, styles, or functionality.
-```
