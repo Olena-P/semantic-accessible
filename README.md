@@ -42,7 +42,8 @@ Navigate to the project directory:
 Open the page in your browser by double-clicking on the `index.html` file or using the terminal: 
 ```bash
 open index.html  # for Mac
+```
+```bash
 start index.html # for Windows
 ```
 Feel free to modify the HTML, CSS, or JavaScript files to customize the content, styles, or functionality.
-```
