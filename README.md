@@ -29,6 +29,17 @@ Semantic markup enhances:
 - Optimization for search engines (SEO).
 - Code maintainability for other developers.
 
+## Accessibility Features
+
+This project incorporates several key accessibility features:
+
+- **Semantic HTML**: Using semantic tags to improve navigation for assistive technologies.
+- **Alt Text for Images**: All images include descriptive `alt` attributes.
+- **Keyboard Navigation**: Interactive elements are fully navigable via keyboard.
+- **Contrast Ratios**: The color scheme meets WCAG contrast recommendations.
+- **Form Labels**: Each form field has associated `<label>` elements.
+- **Error Identification**: Clear error messages and instructions for forms enhance usability.
+
 ## Usage
 
 Clone this repository using:
@@ -47,3 +58,15 @@ open index.html  # for Mac
 start index.html # for Windows
 ```
 Feel free to modify the HTML, CSS, or JavaScript files to customize the content, styles, or functionality.
+
+## Testing Accessibility
+
+To ensure the page is accessible, you can use tools such as:
+
+- **Wave Chrome Extension**: Analyze your web page for accessibility issues.
+- **axe DevTools**: Provides detailed accessibility reports during development.
+- **Lighthouse**: Built-in tool in Chrome DevTools for auditing accessibility.
+
+## Conclusion
+
+Ensuring web accessibility is a continuous process that benefits everyone. By adhering to best practices and utilizing semantic HTML, developers can create more inclusive web experiences for all users.
