@@ -2,27 +2,65 @@
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Семантична та доступна сторінка</title>
+    <meta
+      name="description"
+      content="Семантична та доступна веб-сторінка, яка демонструє важливість семантики у веб-розробці."
+    />
+    <meta name="author" content="Олена Васильчук" />
+
+    <meta property="og:title" content="Семантична та доступна сторінка" />
+    <meta
+      property="og:description"
+      content="Семантична та доступна веб-сторінка, яка демонструє важливість семантики у веб-розробці."
+    />
+    <meta property="og:image" content="/images/Facebook.png" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:title" content="Семантична та доступна сторінка" />
+    <meta
+      name="twitter:description"
+      content="Семантична та доступна веб-сторінка, яка демонструє важливість семантики у веб-розробці."
+    />
+    <meta name="twitter:image" content="/images/Twitter.png" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
     <header>
       <h1>Семантичні вимоги до веб-розробки</h1>
-      <nav>
+      <nav role="navigation">
         <ul>
-          <li><a href="#article">Стаття</a></li>
-          <li><a href="#details">Деталі</a></li>
-          <li><a href="#form">Форма</a></li>
-          <li><a href="#buttons">Кнопки</a></li>
-          <li><a href="#list">Список</a></li>
-          <li><a href="#table">Таблиця</a></li>
-          <li><a href="#images">Зображення</a></li>
-          <li><a href="#footer">Футер</a></li>
+          <li><a href="#article" aria-label="Перейти до статті">Стаття</a></li>
+          <li><a href="#details" aria-label="Перейти до деталей">Деталі</a></li>
+          <li><a href="#form" aria-label="Перейти до форми">Форма</a></li>
+          <li><a href="#buttons" aria-label="Перейти до кнопок">Кнопки</a></li>
+          <li><a href="#list" aria-label="Перейти до списку">Список</a></li>
+          <li><a href="#table" aria-label="Перейти до таблиці">Таблиця</a></li>
+          <li>
+            <a href="#images" aria-label="Перейти до зображення">Зображення</a>
+          </li>
+          <li><a href="#footer" aria-label="Перейти до футера">Футер</a></li>
         </ul>
       </nav>
     </header>
@@ -55,12 +93,10 @@
       <!-- Детальна інформація -->
       <section id="details">
         <h2>Приклад використання детальної інформації</h2>
-        <p>
-          <details>
-            <summary>Приклад детальної інформації</summary>
-            <p>Текст детальної інформації</p>
-          </details>
-        </p>
+        <details>
+          <summary>Приклад детальної інформації</summary>
+          <p>Текст детальної інформації</p>
+        </details>
       </section>
 
       <!-- Форма -->
@@ -68,24 +104,53 @@
         <h2>Контактна форма</h2>
         <form action="/submit" method="POST">
           <label for="name">Ваше ім'я:</label>
-          <input type="text" id="name" name="name" required />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            aria-required="true"
+            autocomplete="name"
+          />
 
           <label for="email">Ваш email:</label>
-          <input type="email" id="email" name="email" required />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            aria-required="true"
+            aria-describedby="email-help"
+            autocomplete="email"
+          />
+          <small id="email-help"
+            >Ми ніколи не передамо вашу електронну адресу стороннім.</small
+          >
 
           <label for="message">Повідомлення:</label>
           <textarea id="message" name="message" rows="4"></textarea>
 
-          <button type="submit">Відправити</button>
+          <button type="submit" aria-label="Відправити форму контактів">
+            Відправити
+          </button>
         </form>
       </section>
 
       <!-- Кнопки -->
       <section id="buttons">
         <h2>Приклад використання кнопок</h2>
-        <button type="button">Звичайна кнопка</button>
-        <button type="submit">Кнопка для відправки форми</button>
-        <button type="reset">Кнопка для скидання форми</button>
+        <button
+          type="button"
+          aria-label="Виконати дію, наприклад, зберегти зміни"
+        >
+          Звичайна кнопка
+        </button>
+        <button type="submit" aria-label="Відправити">
+          Кнопка для відправки форми
+        </button>
+        <button type="reset" aria-label="Скинути">
+          Кнопка для скидання форми
+        </button>
         <p>
           Використовуйте <code>&lt;button&gt;</code> для створення інтерактивних
           елементів на сторінці. Кнопки можуть мати різні типи, такі як
@@ -109,31 +174,31 @@
       <section id="table">
         <h2>Приклад використання таблиць</h2>
         <table>
-          <caption style="color: #9eb0ff">
+          <caption>
             Оцінки студентів за семестр
           </caption>
           <thead>
             <tr>
-              <th>Ім'я студента</th>
-              <th>Курс</th>
-              <th>Оцінка</th>
+              <th scope="col">Ім'я студента</th>
+              <th scope="col">Курс</th>
+              <th scope="col">Оцінка</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Марія Коваль</td>
-              <td>Математика</td>
-              <td>95</td>
+              <td scope="row" headers="student">Марія Коваль</td>
+              <td scope="row" headers="subject">Математика</td>
+              <td scope="row" headers="grade">95</td>
             </tr>
             <tr>
-              <td>Олександр Бондаренко</td>
-              <td>Фізика</td>
-              <td>88</td>
+              <td scope="row">Олександр Бондаренко</td>
+              <td scope="row">Фізика</td>
+              <td scope="row">88</td>
             </tr>
             <tr>
-              <td>Анна Петрова</td>
-              <td>Інформатика</td>
-              <td>93</td>
+              <td scope="row">Анна Петрова</td>
+              <td scope="row">Інформатика</td>
+              <td scope="row">93</td>
             </tr>
           </tbody>
         </table>
@@ -145,7 +210,7 @@
         <figure>
           <img
             src="https://ucarecdn.com/188949ff-9fe5-4e13-a682-f9a2cb4614fa/-/crop/1531x667/69,0/-/preview/-/resize/700/"
-            alt="Приклад зображення семантичного використання"
+            alt="Логотип HTML на помаранчевому тлі"
           />
           <figcaption>Підпис до зображення, що описує його зміст.</figcaption>
         </figure>
